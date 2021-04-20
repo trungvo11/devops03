@@ -1,5 +1,5 @@
 FROM centos:latest
-RUN  install httpd zip unzip -y
+RUN  install httpd zip unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page266/builderz.zip /var/www/html
 WORKDIR /var/www/html
 RUN unzip builderz.zip
