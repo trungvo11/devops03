@@ -5,5 +5,5 @@ WORKDIR /var/www/html
 RUN unzip builderz.zip
 RUN cp -rvf construction-company-website-template/* .
 RUN rm -rf construction-company-website-template builderz.zip
-CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80
