@@ -1,5 +1,4 @@
 FROM centos:latest
-AUTHOR trung
 RUN apt-get install httpd \
   zip \
  unzip
