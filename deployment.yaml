@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  devops03
+spec:
+  selector:
+    matchLabels:
+      app: devops03
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  
+  template:
+    metadata:
+      labels:
+        app:  devops03
+    spec:
+      containers:
+      - image:  soilangtu1993/devops03:v1.latest
+        name:  test
+        imagePullPolicy: Always       
+        ports:
+        - containerPort:  80
